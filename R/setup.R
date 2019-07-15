@@ -73,7 +73,7 @@ setup_rtools_pkgs <- function(extsoft_dir = 'c:/extsoft'){
       paste0('GTK_PATH = ', extsoft_dir, '/gtk$(R_ARCH)'),
       'ifneq ($(strip $(LOCAL_SOFT)),)',
       'LOCAL_CPPFLAGS = -I"$(LOCAL_SOFT)/include"',
-      'LOCAL_LIBS = -L"$(LOCAL_SOFT)/lib$(R_ARCH)" -L"$(LOCAL_SOFT)/lib"',
+      'LOCAL_LIBS = -L"$(RWINLIB)/lib$(R_ARCH)" -L"$(LOCAL_SOFT)/lib$(R_ARCH)" -L"$(LOCAL_SOFT)/lib"',
       'endif'
     )
 
