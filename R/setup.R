@@ -32,6 +32,10 @@ setup_rtools_pkgs <- function(extsoft_dir = 'c:/extsoft'){
     # Download curl specific zip that is not captured in local323
     download.file('https://www.stats.ox.ac.uk/pub/Rtools/goodies/multilib/curl-7.40.0.zip', paste0(temp_dir,'/curl-7.40.0.zip'))
 
+    # Download glpk
+    download.file('http://www.stats.ox.ac.uk/pub/Rtools/goodies/multilib/glpk32.zip', paste0(temp_dir,'/glpk32.zip'))
+    download.file('http://www.stats.ox.ac.uk/pub/Rtools/goodies/multilib/glpk64.zip', paste0(temp_dir,'/glpk64.zip'))
+
     # Download nlopt
     download.file('https://github.com/rwinlib/nlopt/archive/v2.4.2.zip', paste0(temp_dir,'/nlopt.zip'))
 
@@ -46,6 +50,11 @@ setup_rtools_pkgs <- function(extsoft_dir = 'c:/extsoft'){
     unzip(paste0(temp_dir,'/local323.zip'), exdir = extsoft_dir)
     unzip(paste0(temp_dir,'/curl-7.40.0.zip'), exdir = extsoft_dir)
     unzip(paste0(temp_dir,'/nlopt.zip'), exdir = extsoft_dir)
+
+    # Unzip glpk to specific sub folders
+    unzip(paste0(temp_dir,'/glpk32.zip'), files = 'include/glpk.h', exdir = extsoft_dir)
+    unzip(paste0(temp_dir,'/glpk32.zip'), files = 'lib/libglpk.a', exdir = paste0(extsoft_dir, '/lib/i386'), junkpaths = TRUE)
+    unzip(paste0(temp_dir,'/glpk64.zip'), files = 'lib/libglpk.a', exdir = paste0(extsoft_dir, '/lib/x64'), junkpaths = TRUE)
 
     #Copy nlopt sub folder to root
     file.copy(paste0(extsoft_dir, "/nlopt-2.4.2/include"), extsoft_dir, recursive = TRUE)
