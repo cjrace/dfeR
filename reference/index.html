@@ -12,8 +12,8 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
 
@@ -54,16 +54,6 @@
 <![endif]-->
 
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100821064-5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-100821064-5');
-</script>
-
 
   </head>
 
@@ -81,7 +71,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">dfeR</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9015</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.9000</span>
       </span>
     </div>
 
@@ -98,12 +88,7 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
-  <a href="https://github.com/dfe-analytical-services/dfeR/">
-    <span class="fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+        
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -131,8 +116,8 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-project-templates" class="hasAnchor"><a href="#section-project-templates" class="anchor"></a>Project Templates</h2>
-          <p class="section-desc"><p>Structures for reproducible standardised code</p></p>
+          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <p class="section-desc"></p>
         </th>
       </tr>
       
@@ -143,84 +128,9 @@
       <tr>
         
         <td>
-          <p><code><a href="template_project.html">template_project()</a></code> </p>
+          <p><code><a href="roundFiveUp.html">roundFiveUp()</a></code> </p>
         </td>
-        <td><p>Create a standard project structure for analytical projects</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-publication-r-markdown-templates" class="hasAnchor"><a href="#section-publication-r-markdown-templates" class="anchor"></a>Publication R Markdown Templates</h2>
-          <p class="section-desc"><p>Functions for publication style R Markdowns</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="national_statistic.html">national_statistic()</a></code> </p>
-        </td>
-        <td><p>R Markdown DfE National Statistic Output Format</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="official_statistic.html">official_statistic()</a></code> </p>
-        </td>
-        <td><p>R Markdown DfE Official Statistic Output Format</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-sql-functions" class="hasAnchor"><a href="#section-sql-functions" class="anchor"></a>SQL Functions</h2>
-          <p class="section-desc"><p>Functions for importing data from SQL into R</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="sql_conn_string.html">sql_conn_string()</a></code> </p>
-        </td>
-        <td><p>Create a connection string for a Microsoft SQL database</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="read_sql_script.html">read_sql_script()</a></code> </p>
-        </td>
-        <td><p>Read and clean a .sql script for use with RODBC</p></td>
-      </tr>
-    </tbody><tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-formatting" class="hasAnchor"><a href="#section-formatting" class="anchor"></a>Formatting</h2>
-          <p class="section-desc"><p>Useful formatting functions for DfE datasets</p></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="format_ay.html">format_ay()</a></code> </p>
-        </td>
-        <td><p>Format academic year</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="round_nearest.html">round_nearest()</a></code> </p>
-        </td>
-        <td><p>Round to nearest</p></td>
+        <td><p>Round five up</p></td>
       </tr>
     </tbody>
     </table>
@@ -236,7 +146,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Adam Robinson.</p>
+  <p>Developed by Cam Race.</p>
 </div>
 
 <div class="pkgdown">
