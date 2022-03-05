@@ -65,7 +65,7 @@ setup_proxy()
 
 ## Contributing
 
-Ideas for dfeR should first be raised as a [github issue](https://github.com/dfe-analytical-services/dfeR) after which anyone is free to write the code and create a pull request for review. 
+Ideas for dfeR should first be raised as a [GitHub issue](https://github.com/dfe-analytical-services/dfeR) after which anyone is free to write the code and create a pull request for review. 
 
 When contributing to dfeR you should work on a new branch and, where applicable, you will be asked to: 
 
@@ -76,3 +76,15 @@ When contributing to dfeR you should work on a new branch and, where applicable,
 Your pull request should then be reviewed and approved by at least one other person before it can be merged. 
 
 Once your changes have been merged they should appear almost immediately, though users will need to reinstall the package locally to see them. 
+
+### Adding a new function
+
+On new branch off of main:
+
+- create a new script for it in the `R/`
+- add roxygen documentation to the function using `Ctrl-Shift-Alr-R`
+- add script with unit tests in the `tests/testthat/` folder
+- update documentation by running `roxygen2::roxygenise()`
+- tidy code using `styler::style_pkg()`
+- test using `rcmdcheck::rcmdcheck()`
+- open a PR and request review
